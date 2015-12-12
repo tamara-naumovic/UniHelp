@@ -17,7 +17,7 @@
               <a  href="home.php" id="home">Home</a>
             </li>
             <li>
-              <a href="user<?php  //echo $_SESSION['id']; ?>.php">Profile</a>
+              <a href="user<?php  echo $_SESSION['id']; ?>.php">Profile</a>
 
             </li>
             <li>
@@ -27,7 +27,7 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="logout.php" target="_blank">Log Out</a></li>
+            <li><a href="logout.php">Log Out</a></li>
             
           </ul>
           <!--nesto-->

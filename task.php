@@ -1,10 +1,10 @@
 <?php @session_start();?>
 <?php
   
-    //if(!isset($_SESSION['use']))   
-   // {
-   //  header("Location:index.php"); 
-   // }
+    if(!isset($_SESSION['use']))   
+    {
+    header("Location:index.php"); 
+    }
 
 ?>
 <!DOCTYPE html>
@@ -95,14 +95,47 @@
                       </table>
 
                       </div>
-                      
-                      <button type="button" class="btn btn-success" style="margin-left:70%;">Enroll</button>
+                      <form action="task.php?id=<?php echo $row->task_id; ?>" method="post">
+                         <?php }
+                         $participants=[];
+                         $br=0;
+                         if($br==$row->parc_number) {
+                          ?><button type="button" class="btn btn-default" style="margin-left:70%;">Enroll</button>
 
+                        <?php
+                        echo "Task full!"; }
+                         if(!isset($_SESSION['enroll'.$row->task_id])){
+                         if(!isset($_POST['enroll'.$row->task_id])) { 
+                          
+                        ?>                 
+                      <button name="enroll<?php echo $row->task_id; ?>" type="submit" class="btn btn-success" style="margin-left:70%;">Enroll</button>
+                      </form>
+                      <?php }  else{
+                        ?>
+                        
+                      <button type="button" class="btn btn-default" style="margin-left:70%;">Enroll</button>
+                        <br><?php
+                        echo "Enrolled successfully!";
+                        $_SESSION['enroll'.$row->task_id]=$_POST['enroll'.$row->task_id];
+                        while($br<=$row->parc_number){
+                          array_push($participants, $_SESSION['id']);
+                          $br++;
+                        }
+
+                         } 
+                       }else {?>
+                        <button type="button" class="btn btn-default" style="margin-left:70%;">Enroll</button>
+                        <br>
+                        <?php 
+                        echo "Already enrolled!";
+                      }
+                        
+                        ?>
                     </div> 
                   </div>
                   <?php
                 }
-              }
+              
               $mysqli->close();
                   ?>
                 
