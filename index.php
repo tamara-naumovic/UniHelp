@@ -24,21 +24,7 @@
         .logo{height: 30px; padding-top: 0px}
         #head-text{color: white}
       </style>
-      <script type="text/javascript">
-    var password = document.getElementById("password")
-    , confirm_password = document.getElementById("confirm_password");
-
-    function validatePassword(){
-      if(password.value != confirm_password.value) {
-        confirm_password.setCustomValidity("Passwords Don't Match");
-      } else {
-        confirm_password.setCustomValidity('');
-      }
-    }
-
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
-    </script>
+      
 </head>
 <body background="bootstrap/dist/img/bg.png">
     <div class="container">
@@ -109,7 +95,7 @@
             <div class="well bs-component">
               <form class="form-horizontal" id="enableForm" method="post" action="">
 
-                <fieldset>
+                
                   <h2>Sign up</h2>
                     <br>
                     <div class="form-group">
@@ -181,8 +167,24 @@
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
-                </fieldset>
+                
               </form>
+
+              <script type="text/javascript">
+    var password = document.getElementById("password")
+    , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+      if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+      } else {
+        confirm_password.setCustomValidity('');
+      }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+    </script>
             </div>
           </div>
         </div>

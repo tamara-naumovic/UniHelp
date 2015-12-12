@@ -35,7 +35,7 @@ class User{
 		if ($mysqli->query($query))
 		{
 			?> <script type="text/javascript">
-			window.location.href = 'success.php';
+			window.location.href = 'home.php';
 			</script>
 			<?php
 		} 

@@ -42,7 +42,7 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="" target="_blank">Log Out</a></li>
+            <li><a href="logout.php" target="_blank">Log Out</a></li>
             
           </ul>
 
