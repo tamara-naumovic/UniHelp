@@ -7,6 +7,9 @@
     <meta name="description" content="The most popular online store for consoles, games and other gaming equipment">
     <meta name="author" content="Licina Ana">
     <link rel="icon" href="images/favicon.jpeg"> 
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/feed.css">
+    
 
     <title>Registrated Successfully</title>
 
@@ -15,13 +18,21 @@
     <link href="css/carousel.css" rel="stylesheet">
   </head>
 
-  <body>
-    <div>
-    <center><h1 style="padding-left:80px; padding-top: 15%;"><b>You have registrated sucessfully!</b></h1></center>
-  </div>
-  <div style="padding-top: 50%; padding-left:90%;">
-    <br>
-    <a href="home.php">Back to LogIn Page</a>
-  </div>
+  <body background="bootstrap/dist/img/bg.png">
+  <center><div class="success">
+                    <header class="tasks-search">
+
+                        <span>You have registrated sucessfully!</span>
+                    </header>
+                    <br>
+                    <br>
+                            <a href="home.php"><button type="button" class="btn btn-info btn-lg btn-warning" >Back to LogIn Page</button></a>
+                     
+                </div>
+    </center>
+    
+
+  
+  
   </body>
 </html>
