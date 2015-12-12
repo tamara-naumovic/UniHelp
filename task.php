@@ -84,7 +84,7 @@
                           <tr>
                             <th>Social</th>
                             <th>Career</th>
-                            <th>Professional</th>
+                            <th>Collaboration</th>
                           </tr>
                         </thead>
                         <tbody>

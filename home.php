@@ -23,7 +23,10 @@
   #head-text{color: white}
   </style>
 
-  </style>
+  <script type="text/javascript">
+    $('.selectpicker').selectpicker();
+
+  </script>
 </head>
 <body bgcolor="#D3D3D3">
     <div class="container">
@@ -152,48 +155,50 @@
                                   <input name="reward" type="text" class="form-control" placeholder="Enter reward" id="add-task-form-reward">
                                 </div>
 
+                                 <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th><label for="add-task-form-exps">Socail</label></th>
+                                          <th><label for="add-task-form-expc">Carrer</label></th>
+                                          <th><label for="add-task-form-exp0">Collaboration</label></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td><input name="parc_number" type="number" class="form-control" placeholder="Socail XP gained" id="add-task-form-exps" required></td>
+                                          <td> <input name="parc_number" type="number" class="form-control" placeholder="Carrer XP gained" id="add-task-form-expc" required></td>
+                                          <td><input name="parc_number" type="number" class="form-control" placeholder="Collaboration XP gained" id="add-task-form-expo" required></td>
+                                        </tr>
+                                                                 
+                                      </tbody>
+                                    </table>
                                 <div class="form-group">
                                   <label name="location" for="add-task-form-location">Location</label>
-                                  <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
-                                    <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                      <li class="dropdown-header">Faculty</li>
-                                      <?php 
-                                        include "building.class.php";
-                                        $b=new Building();
-                                        $b->returnB(4);
-                                      ?>
-                                      <li class="divider"></li>
-                                      <li class="dropdown-header">Library</li>
-                                      <?php 
-                                        
-                                        $b1=new Building();
-                                        $b1->returnB(3);
-                                      ?>
-                                      <li class="divider"></li>
-                                      <li class="dropdown-header">Restaurants</li>
-                                      <?php 
-                                        
-                                        $b2=new Building();
-                                        $b2->returnB(2);
-                                      ?>
-                                      <li class="divider"></li>
-                                      <li class="dropdown-header">Dorm</li>
-                                      <?php 
-                                        
-                                        $b3=new Building();
-                                        $b3->returnB(1);
-                                      ?>
-                                      <li class="divider"></li>
-                                    </ul>
-                                  </div>
+                                  <br>
+                                   <select class="selectpicker" id="add-task-form-location">
+                                          <optgroup label="Faculty" >
+                                            <option>Ovde fakulteti</option>
+                                            
+                                          </optgroup>
+                                          <optgroup label="Dorm">
+                                            <option>Ovde domovi</option>
+                                            
+                                          </optgroup>
+                                           <optgroup label="Library" >
+                                            <option>Ovde biblioteke</option>
+                                            
+                                          </optgroup>
+                                           <optgroup label="Restaurants" >
+                                            <option>Ovde menze</option>
+                                            
+                                          </optgroup>
+                                    </select>
+                                   
 
-                                  
                                 </div>
-                                <div class="modal-footer">
-                              <button name="add_task" type="submit" class="btn btn-default" data-submit="modal">Add</button>
-                            </div>
+                                <div class="modal-footer" id="add-task-form-confirm">
+                                  <button name="add_task" type="submit" class="btn btn-default" data-submit="modal">Add</button>
+                                </div>
                               </form>
                               <?php
                               if(isset($_POST['add_task'])){
