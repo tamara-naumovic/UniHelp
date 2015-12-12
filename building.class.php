@@ -33,7 +33,7 @@ public function returnB($type){
 	} else {
 		while ($row=$q->fetch_object()){
 			?>
-			<li><a href="#"><?php echo $row->buildingname ?></a></li>
+			<option><?php echo $row->buildingname ?></option>
 			<?php
 		}
 }
