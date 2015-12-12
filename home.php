@@ -107,7 +107,9 @@
                   <input id='all' name='m' type='radio'>
                   <label for='all'>All</label>
                 </main>
-                <?php
+                
+                <div class='body'>
+                  <?php
                       include "connection.php";
 
                       $query="SELECT * FROM tasks";
@@ -120,19 +122,20 @@
                       } else {
                         while ($row=$q->fetch_object()){
                           ?>
-                <div class='body'>
                   <img alt='kanye' src='http://f.cl.ly/items/1m050C1L382z1c1a1S2E/322005-kanye-west.png'>
                   <div class='t'>
-                    <span class='name'><a href="#"><?php echo $row->org_name; ?></a></span>
+                    <span class='name'><a href="task.php?id=<?php echo $row->task_id; ?>"><?php echo $row->org_name; ?></a></span>
                     <span class='forward'>&#10150;</span>
                   </div>
                   <div class='b'><?php echo $row->description; ?></div>
-                </div>
-              </div>
-              <?php }
+                  <hr>
+                <?php }
               } 
                 $mysqli->close();
               ?>
+                </div>
+              </div>
+              
               <!-- kraj wall-a-->
 
               <!-- pocetak desne strane-->
