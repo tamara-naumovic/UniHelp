@@ -111,12 +111,11 @@
 <h3>Reviews:</h3>
 		<div class="comment-wrap" style="margin-top:0px;">
 				<div class="photo">
-						<div class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" style="border-radius:50%; height:40px; padding-right:5px; "></div>
+						<div class="avatar"><img src="bootstrap/dist/img/komazec.jpg" style="border-radius:50%; height:60px; padding-right:5px; "></div>
 				</div>
 				<div class="comment-block">
-				<h4 style="font-weight:600; margin:4px 10px 0px; ">Boris Balint</h4>
-						<p class="comment-text" style="margin:2px 10px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
-								sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
+				<h4 style="font-weight:600; margin:4px 10px 0px; ">Stefan Komazec</h4>
+						<p class="comment-text" style="margin:2px 10px 0px;">Super saradnja, lepa slika, pozzz</p>
 						<div class="bottom-comment">
 								<div class="comment-date" style="margin:2px 10px 0px;">Aug 24, 2014 @ 2:35 PM</div>
 								<ul class="comment-actions" style="color:#0F7FC6;margin-right:10px;">
@@ -129,12 +128,11 @@
 		</div>
 		<div class="comment-wrap" style="margin-top:0px;">
 				<div class="photo">
-						<div class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" style="border-radius:50%; height:40px; padding-right:5px; "></div>
+						<div class="avatar"><img src="bootstrap/dist/img/todorovic.jpg" style="border-radius:50%; height:60px; padding-right:5px; "></div>
 				</div>
 				<div class="comment-block">
-				<h4 style="font-weight:600; margin:4px 10px 0px; ">Aleksandar Tasin</h4>
-						<p class="comment-text" style="margin:2px 10px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
-								sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
+				<h4 style="font-weight:600; margin:4px 10px 0px; ">Ivan Todorovic</h4>
+						<p class="comment-text" style="margin:2px 10px 0px;">Bilo mi je zadovoljstvo pomoći lepoj koleginici ;)</p>
 						<div class="bottom-comment">
 								<div class="comment-date" style="margin:2px 10px 0px;">Aug 24, 2014 @ 2:35 PM</div>
 								<ul class="comment-actions" style="color:#0F7FC6;margin-right:10px;">
