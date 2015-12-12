@@ -17,15 +17,13 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
-
-
-
-  </style>
+  
 </head>
 <body>
-    <div class="container">
+    
         
 <?php include ("menu.php"); ?>
+<div class="container">
         <!--wall -->
           <div class="wrap-wall">
           <div class="wall">
@@ -40,32 +38,11 @@
               <!-- kraj leve strane-->
               <!--pocetak taska opisa -->
               <div class="col-md-6">
-                <header>
+                <header id="task-page" style="span:last-child:hover {
+  background-color: #f3a41e;">
                   <span class='first'></span>
-                  <span>Add task</span>
-                  <span><button type="button" class="btn btn-info btn-lg btn-warning" data-toggle="modal" data-target="#myModal" id="myBtn">&#9998;</button>
-                     <!-- Modal -->
-                      <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-                        
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header" id="add-task-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              <h4 class="modal-title" >Add task</h4>
-                            </div>
-                            <div class="modal-body">
-                              <textarea id="add-task-description" >Add description</textarea>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                          
-                        </div>
-                      </div>
-                     <!-- kraj modala--> 
-                    
+                  <span>Task info</span>
+                  <span >
                   </span>
                 </header>
                 <div class="panel panel-warning" id="task-wrap" > 
@@ -77,8 +54,38 @@
                           <span class='name' id="task-org-name"><a href="#">Kanye West</a></span>
                           
                         </div>
-                        <div class='b' id="task-description">Duis aute irure dolor in velit esse cillum dolore voneu fugiat nulla.</div>
+                        <div class='b' id="task-description" style="font-size:100%">Duis aute irure dolor in velit esse cillum dolore voneu fugiat nulla.</div>
                       </div>
+                      <br>
+                      <div class='b' id="parc-number" style="font-size:100%">Number of participants needed #number </div>
+                      <br>
+                      <div class='b' id="task-location" style="font-size:100%">Location<br> #location </div>
+                      <br>
+                      <div class='b' id="task-reward" style="font-size:100%">Reward<br> #reward </div>
+                      <br>
+                      <div class='b' id="exps" style="font-size:100%">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Social</th>
+                            <th>Career</th>
+                            <th>Professional</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>+#exp1</td>
+                            <td>+#exp2</td>
+                            <td>+#exp3</td>
+                          </tr>
+                                                   
+                        </tbody>
+                      </table>
+
+                      </div>
+                      
+                      <button type="button" class="btn btn-success" style="margin-left:70%;">Enroll</button>
+
                     </div> 
                   </div>
                 
@@ -94,6 +101,7 @@
 
            </div>
 
+        </div>
         </div>
         
         
