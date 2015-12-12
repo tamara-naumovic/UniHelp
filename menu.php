@@ -21,7 +21,7 @@
 
             </li>
             <li>
-              <a href="rank.php">Rank list</a>
+              <a href="maps.php">Rank list</a>
             </li>
             
           </ul>
