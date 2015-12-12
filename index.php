@@ -1,3 +1,15 @@
+<?php
+
+    if(isset($_POST['signin']))   
+    {
+     $mail = $_POST['email'];
+     $pass = $_POST['password'];
+
+     include "user.class.php";
+     $user=new User();
+     $user->logIn($mail, $pass);
+  }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -65,7 +77,7 @@
           <ul class="nav navbar-nav navbar-right" >
               <form class="navbar-form navbar-right" >
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email">
+                        <input name="ëmail" type="email" class="form-control" placeholder="Email">
                           <input type="text" class="form-control" placeholder="Password">
                       </div>
               <button type="submit" class="btn btn-default">Log in</button>
