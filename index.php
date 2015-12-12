@@ -37,7 +37,7 @@ if(isset($_POST['signin']))
   </style>
 
 </head>
-<body background="bootstrap/dist/img/bg.png">
+<body background="bootstrap/dist/img/bg.png" style="background-repeat:no-repeat;" >
   <div class="container">
 
     <!-- pocetak menija -->
