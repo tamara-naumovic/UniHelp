@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>UniHelp</title>
        <link rel="stylesheet" href="bootstrap/dist/css/style.css" media="screen">
+       <link rel="stylesheet" href="bootstrap/dist/css/font-awesome.css" media="screen">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" type="image/png" href="../favicon.png"/>
            
 
@@ -18,17 +20,15 @@
     <div class="container">
         
 <!-- pocetak menija -->
-<<<<<<< HEAD
+
    <?php include ("menu.php"); ?>
-=======
     <?php include ("menu.php"); ?>
->>>>>>> origin/master
         <!-- kraj menija menija -->
         
         <!-- pocetak content leva strana -->
         <br><br><br><br>
         <div class="row">
-<div class="col-lg-6">
+<div class="col-lg-4">
             <div class="card-wrapper" id="cardWrap">
 
       <div class="profile-card">
@@ -76,47 +76,68 @@
 
           </div>
             <!-- kraj content leva strana -->
-           
-            <div class="comments">
-		<div class="comment-wrap">
-				<div class="photo">
-						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
-				</div>
-				<div class="comment-block">
-						<form action="">
-								<textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
-						</form>
-				</div>
-		</div>
+            <!-- progres bar-->
+            <div class="col-lg-6" style="margin: 5% auto 5%;">
+       <h5 style="margin-left:20px;">Lorem Ipsum</h5>
+        <div class="progress">
 
-		<div class="comment-wrap">
+  <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%; background-color:#FF9900;">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
+</div>
+<h5 style="margin-left:20px;">Lorem Ipsum</h5>
+        <div class="progress">
+
+  <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 75%; background-color:#1975FF;">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
+</div>
+<h5 style="margin-left:20px;">Lorem Ipsum</h5>
+        <div class="progress">
+
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
+</div>
+
+  </div>
+
+
+           <!-- komentari -->
+            <div class="comments col-lg-6" style="margin-top:-2%;">
+<h3>Reviews:</h3>
+		<div class="comment-wrap" style="margin-top:0px;">
 				<div class="photo">
-						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+						<div class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" style="border-radius:50%; height:40px; padding-right:5px; "></div>
 				</div>
 				<div class="comment-block">
-						<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
+				<h4 style="font-weight:600; margin:4px 10px 0px; ">Boris Balint</h4>
+						<p class="comment-text" style="margin:2px 10px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
 								sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
 						<div class="bottom-comment">
-								<div class="comment-date">Aug 24, 2014 @ 2:35 PM</div>
-								<ul class="comment-actions">
-										<li class="complain">Complain</li>
-										<li class="reply">Reply</li>
+								<div class="comment-date" style="margin:2px 10px 0px;">Aug 24, 2014 @ 2:35 PM</div>
+								<ul class="comment-actions" style="color:#0F7FC6;margin-right:10px;">
+										<i class="fa fa-thumbs-up" style="color:#0F7FC6; " ></i>Thumbs up!
+
+									
 								</ul>
 						</div>
 				</div>
 		</div>
-
-		<div class="comment-wrap">
+		<div class="comment-wrap" style="margin-top:0px;">
 				<div class="photo">
-						<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg')"></div>
+						<div class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" style="border-radius:50%; height:40px; padding-right:5px; "></div>
 				</div>
 				<div class="comment-block">
-						<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam.</p>
+				<h4 style="font-weight:600; margin:4px 10px 0px; ">Aleksandar Tasin</h4>
+						<p class="comment-text" style="margin:2px 10px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
+								sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
 						<div class="bottom-comment">
-								<div class="comment-date">Aug 23, 2014 @ 10:32 AM</div>
-								<ul class="comment-actions">
-										<li class="complain">Complain</li>
-										<li class="reply">Reply</li>
+								<div class="comment-date" style="margin:2px 10px 0px;">Aug 24, 2014 @ 2:35 PM</div>
+								<ul class="comment-actions" style="color:#0F7FC6;margin-right:10px;">
+										<i class="fa fa-thumbs-up" style="color:#0F7FC6; " ></i>Thumbs up!
+
+									
 								</ul>
 						</div>
 				</div>
@@ -124,6 +145,7 @@
 </div>
 
 </div>
+
             
             
             <script type="text/javascript">
