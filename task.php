@@ -121,10 +121,10 @@
                         <br><?php
                         echo "Enrolled successfully!";
                         $_SESSION['enroll'.$row->task_id]=$_POST['enroll'.$row->task_id];
-                        while($br<=$row->parc_number){
-                          array_push($participants, $_SESSION['id']);
-                          $br++;
-                        }
+                        // while($br<=$row->parc_number){
+                        //   array_push($participants, $_SESSION['id']);
+                        //   $br++;
+                        // }
 
                          } 
                        }else {?>
