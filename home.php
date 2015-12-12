@@ -1,10 +1,10 @@
 <?php @session_start();?>
 <?php
   
-    if(!isset($_SESSION['use']))   
-    {
-     header("Location:index.php"); 
-    }
+    //if(!isset($_SESSION['use']))   
+   // {
+   //  header("Location:index.php"); 
+   // }
 
 ?>
 <!DOCTYPE html>
@@ -41,9 +41,9 @@
                  
                 </header>
                 <br>
-                    <form class="form-horizontal" id="search-forma">
-                      <label for="job-type">Job type</label>
-                        <select class="form-control" id="job-type">
+                    <form action="home.php" method="post" class="form-horizontal" id="search-forma">
+                      <label  for="job-type">Job type</label>
+                        <select name="job_type" class="form-control" id="job-type">
                           <option>Volunteering</option>
                           <option>Practice</option>
                           <option>Workshop</option>
@@ -51,17 +51,32 @@
                           <option>Physical work</option>
                         </select>
                         <br>
-                      <label for="peer-type">Location near by</label>
-                        <select class="form-control" id="peer-type">
-                          <option>S2S</option>
-                          <option>C2S</option>
-                          <option>O2S</option>
-                          <option>All</option>
-                          
-                        </select>
-                        <br>
+                      <label  for="peer-type">Location near by</label>
+                        <select name="location" class="form-control" id="peer-type">
+                          <?php
+                                  include "connection.php";
 
-                        <button type="submit" class="btn btn-default">Submit</button>
+                                  $query1="SELECT * FROM buildings ";
+
+                                  if (!$q1=$mysqli->query($query1)){
+                                    echo "<p>There was an error. Please try again later</p>";
+                                    exit();
+                                  }
+                                  if ($q1->num_rows==0){
+                                    echo "There are no locations in the datebase";
+                                  } else {
+                                    while ($row1=$q1->fetch_object()){
+                                      ?>
+                                    <option><?php echo $row1->buildingname; ?></option>
+                                   <?php }
+                                   }
+                                   $mysqli->close();
+                                    ?>
+                          
+                                    </select>
+                                    <br>
+
+                        <button name="choose" type="submit" class="btn btn-default">Submit</button>
 
 
                     </form>
@@ -72,7 +87,7 @@
                 <header>
                   <span class='first'></span>
                   <span>Add task</span>
-                  <span><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="myBtn">&#9998;</button>
+                  <span><button type="button" class="btn btn-info btn-lg btn-warning" data-toggle="modal" data-target="#myModal" id="myBtn">&#9998;</button>
                      <!-- Modal -->
                       <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
@@ -107,15 +122,40 @@
                   <input id='all' name='m' type='radio'>
                   <label for='all'>All</label>
                 </main>
+                
                 <div class='body'>
+                  <?php
+                      include "connection.php";
+
+                      $query="SELECT * FROM tasks ";
+
+                      if(isset($_POST['choose'])){
+                        $query.="WHERE (job_type='".$_POST['job_type']."' AND location='".$_POST['location']."')";
+                      }
+
+                      if (!$q=$mysqli->query($query)){
+                        echo "<p>There was an error. Please try again later</p>";
+                        exit();
+                      }
+                      if ($q->num_rows==0){
+                        echo "There are no tasks in the datebase";
+                      } else {
+                        while ($row=$q->fetch_object()){
+                          ?>
                   <img alt='kanye' src='http://f.cl.ly/items/1m050C1L382z1c1a1S2E/322005-kanye-west.png'>
                   <div class='t'>
-                    <span class='name'>Kanye West</span>
+                    <span class='name'><a href="task.php?id=<?php echo $row->task_id; ?>"><?php echo $row->org_name; ?></a></span>
                     <span class='forward'>&#10150;</span>
                   </div>
-                  <div class='b'>Duis aute irure dolor in velit esse cillum dolore voneu fugiat nulla.</div>
+                  <div class='b'><?php echo $row->description; ?></div>
+                  <hr>
+                <?php }
+              } 
+                $mysqli->close();
+              ?>
                 </div>
               </div>
+              
               <!-- kraj wall-a-->
 
               <!-- pocetak desne strane-->
