@@ -75,13 +75,26 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right" >
-              <form class="navbar-form navbar-right" >
+              <form method="post" class="navbar-form navbar-right" >
                       <div class="form-group">
-                        <input name="ëmail" type="email" class="form-control" placeholder="Email">
-                          <input type="text" class="form-control" placeholder="Password">
+                        <input name="ëmail" type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+                          <input name="password" type="password" class="form-control" placeholder="Password" required>
                       </div>
-              <button type="submit" class="btn btn-default">Log in</button>
+              <button type="submit" class="btn btn-default" name="signin"S>Log in</button>
         </form>
+
+        <?php
+
+    if(isset($_POST['signin']))   
+    {
+     $mail = $_POST['email'];
+     $pass = $_POST['password'];
+
+     include "user.class.php";
+     $user=new User();
+     $user->logIn($mail, $pass);
+  }
+  ?>
           </ul>
 
         </div>
