@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>UniHelp</title>
+    <title>UniHelp - User profile</title>
        <link rel="stylesheet" href="bootstrap/dist/css/style.css" media="screen">
        <link rel="stylesheet" href="bootstrap/dist/css/font-awesome.css" media="screen">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
@@ -11,7 +11,10 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" type="image/png" href="../favicon.png"/>
            
-
+ <style>
+  .logo{height: 55px; padding-top: 0px}
+  #head-text{color: white}
+  </style>
      
       
 </head>
@@ -78,21 +81,21 @@
             <!-- kraj content leva strana -->
             <!-- progres bar-->
             <div class="col-lg-6" style="margin: 5% auto 5%;">
-       <h5 style="margin-left:20px;">Lorem Ipsum</h5>
+       <h5 style="margin-left:20px;">Social</h5>
         <div class="progress">
 
   <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 20%; background-color:#FF9900;">
     <span class="sr-only">40% Complete (success)</span>
   </div>
 </div>
-<h5 style="margin-left:20px;">Lorem Ipsum</h5>
+<h5 style="margin-left:20px;">Career</h5>
         <div class="progress">
 
   <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 75%; background-color:#1975FF;">
     <span class="sr-only">40% Complete (success)</span>
   </div>
 </div>
-<h5 style="margin-left:20px;">Lorem Ipsum</h5>
+<h5 style="margin-left:20px;">Professional</h5>
         <div class="progress">
 
   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">

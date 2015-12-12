@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>UniHelp</title>
-
+  <title>UniHelp - Ranks</title>
+<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/feed.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <?php include ("menu.php"); ?>
   <script src="http://maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
   <div id="map" style="width: 500px; height: 400px;"></div>
