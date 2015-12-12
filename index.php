@@ -28,7 +28,7 @@ if(isset($_POST['signin']))
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
   <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
   <style>
-  .logo{height: 30px; padding-top: 0px}
+  .logo{height: 55px; padding-top: 0px}
   #head-text{color: white}
   </style>
 
