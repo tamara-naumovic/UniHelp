@@ -74,7 +74,7 @@
               <br>
               <br>        
               <!-- leva strana-->      
-              <div class="col-md-3">
+              <div class="col-md-3" style="padding-top:2%;">
               <header class="tasks-search">
 
                   <span>Search</span>
@@ -123,7 +123,7 @@
               </div>
               <!-- kraj leve strane-->
               <!--pocetak wall-a -->
-              <div class="col-md-6">
+              <div class="col-md-6" style="padding-top:2%;">
                 <header>
                   <span class='first'></span>
                   <span>Add task</span>
@@ -200,7 +200,7 @@
               <!-- kraj wall-a-->
 
               <!-- pocetak desne strane-->
-              <div class="col-md-3">
+              <div class="col-md-3" style="padding-top:2%;">
               <div class="best-raneked-student">
                    <header class="tasks-search">
 

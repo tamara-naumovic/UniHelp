@@ -1,6 +1,6 @@
 <!-- pocetak menija -->
 <?php @session_start(); ?>
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top" >
       <div class="container">
         <div class="navbar-header">
           <a href="#" class="navbar-brand" ><img class="logo" src="bootstrap/dist/img/logo.png"/></a>
@@ -9,9 +9,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+            
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" style="padding:1.5% 2% 0 0;">
             <li >
               <a  href="home.php" id="home">Home</a>
             </li>
