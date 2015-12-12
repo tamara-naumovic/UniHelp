@@ -46,22 +46,34 @@
                   </span>
                 </header>
                 <div class="panel panel-warning" id="task-wrap" > 
-                    
+                    <?php
+                    if(isset($_GET['id'])){
+                        include "connection.php";
+
+                        $query="SELECT * FROM tasks WHERE task_id='".$_GET['id']."'";
+
+                        if (!$q=$mysqli->query($query)){
+                          echo "<p>There was an error. Please try again later</p>";
+                          exit();
+                        }
+                        if ($q->num_rows==1){
+                          $row=$q->fetch_object();
+                      ?>
                     <div class=panel-body> 
                       <div class='body'>
                         <img alt='kanye' src='http://f.cl.ly/items/1m050C1L382z1c1a1S2E/322005-kanye-west.png'>
                         <div class='t'>
-                          <span class='name' id="task-org-name"><a href="#">Kanye West</a></span>
+                          <span class='name' id="task-org-name"><a href="#"><?php echo $row->org_name; ?></a></span>
                           
                         </div>
-                        <div class='b' id="task-description" style="font-size:100%">Duis aute irure dolor in velit esse cillum dolore voneu fugiat nulla.</div>
+                        <div class='b' id="task-description" style="font-size:100%"><?php echo $row->description; ?></div>
                       </div>
                       <br>
-                      <div class='b' id="parc-number" style="font-size:100%">Number of participants needed #number </div>
+                      <div class='b' id="parc-number" style="font-size:100%">Number of participants needed <?php echo $row->parc_number; ?> </div>
                       <br>
-                      <div class='b' id="task-location" style="font-size:100%">Location<br> #location </div>
+                      <div class='b' id="task-location" style="font-size:100%">Location<br> <?php echo $row->location; ?> </div>
                       <br>
-                      <div class='b' id="task-reward" style="font-size:100%">Reward<br> #reward </div>
+                      <div class='b' id="task-reward" style="font-size:100%">Reward<br> <?php echo $row->reward; ?> </div>
                       <br>
                       <div class='b' id="exps" style="font-size:100%">
                       <table class="table">
@@ -74,9 +86,9 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>+#exp1</td>
-                            <td>+#exp2</td>
-                            <td>+#exp3</td>
+                            <td>+<?php echo $row->exps; ?></td>
+                            <td>+<?php echo $row->expc; ?></td>
+                            <td>+<?php echo $row->expo; ?></td>
                           </tr>
                                                    
                         </tbody>
@@ -88,6 +100,11 @@
 
                     </div> 
                   </div>
+                  <?php
+                }
+              }
+              $mysqli->close();
+                  ?>
                 
               </div>
               <!-- kraj task opisa-->
