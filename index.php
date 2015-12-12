@@ -1,10 +1,10 @@
 <?php @session_start();?>
 <?php
 
-    if(isset($_SESSION['use']))   
-    {
-      header("Location:home.php"); 
-    }
+if(isset($_SESSION['use']))   
+{
+  header("Location:home.php"); 
+}
 ?>
 <?php
 
@@ -136,66 +136,66 @@ if(isset($_POST['signin']))
               <div class="col-lg-10">
                 <select class="form-control" id="select" name="fax">
                   <?php
-                                  include "connection.php";
+                  include "connection.php";
 
-                                  $query1="SELECT * FROM buildings WHERE buildingtype=4; ";
+                  $query1="SELECT * FROM buildings WHERE buildingtype=4; ";
 
-                                  if (!$q1=$mysqli->query($query1)){
-                                    echo "<p>There was an error. Please try again later</p>";
-                                    exit();
-                                  }
-                                  if ($q1->num_rows==0){
-                                    echo "There are no locations in the datebase";
-                                  } else {
-                                    while ($row1=$q1->fetch_object()){
-                                      ?>
-                  <option><?php echo $row1->buildingname; ?></option>
-                  <?php }
-                                   }
-                                   $mysqli->close();
-                                    ?>
-                  
-                </select>
+                  if (!$q1=$mysqli->query($query1)){
+                    echo "<p>There was an error. Please try again later</p>";
+                    exit();
+                  }
+                  if ($q1->num_rows==0){
+                    echo "There are no locations in the datebase";
+                  } else {
+                    while ($row1=$q1->fetch_object()){
+                      ?>
+                      <option><?php echo $row1->buildingname; ?></option>
+                      <?php }
+                    }
+                    $mysqli->close();
+                    ?>
+                    
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="col-lg-10 col-lg-offset-2">
-                <button type="submit" class="btn btn-primary" name="register">Submit</button>
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="submit" class="btn btn-primary" name="register">Submit</button>
+                </div>
               </div>
-            </div>
 
-          </form>
+            </form>
 
-          <script type="text/javascript">
-          var password = document.getElementById("password")
-          , confirm_password = document.getElementById("confirm_password");
+            <script type="text/javascript">
+            var password = document.getElementById("password")
+            , confirm_password = document.getElementById("confirm_password");
 
-          function validatePassword(){
-            if(password.value != confirm_password.value) {
-              confirm_password.setCustomValidity("Passwords Don't Match");
-            } else {
-              confirm_password.setCustomValidity('');
+            function validatePassword(){
+              if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+              } else {
+                confirm_password.setCustomValidity('');
+              }
             }
-          }
 
-          password.onchange = validatePassword;
-          confirm_password.onkeyup = validatePassword;
-          </script>
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+            </script>
 
-          <?php
-           if (isset($_POST["register"])){
+            <?php
+            if (isset($_POST["register"])){
 
-           include 'user.class.php';
+             include 'user.class.php';
 
-      $user = new User();
-      $user->create($_POST);
+             $user = new User();
+             $user->create($_POST);
 
-      echo $user->writeToDb();
-    
-    }
-?>
-        </div>
-      </div>
-    </div>
-    <!-- kraj content desna strana -->
-  </body>
+             echo $user->writeToDb();
+             
+           }
+           ?>
+         </div>
+       </div>
+     </div>
+     <!-- kraj content desna strana -->
+   </body>
