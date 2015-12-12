@@ -25,7 +25,7 @@
 
   </style>
 </head>
-<body>
+<body bgcolor="#D3D3D3">
     <div class="container">
         
         <!-- pocetak menija -->
