@@ -123,7 +123,7 @@
                 <div class='body'>
                   <img alt='kanye' src='http://f.cl.ly/items/1m050C1L382z1c1a1S2E/322005-kanye-west.png'>
                   <div class='t'>
-                    <span class='name'><?php echo $row->org_name; ?></span>
+                    <span class='name'><a href="#"><?php echo $row->org_name; ?></a></span>
                     <span class='forward'>&#10150;</span>
                   </div>
                   <div class='b'><?php echo $row->description; ?></div>
