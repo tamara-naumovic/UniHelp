@@ -14,7 +14,7 @@ if(isset($_GET['name'])){
                   } else {
                     while ($row1=$q1->fetch_object()){
                       ?>
-                      <li><?php echo $row1->name; ?></li>
+                      <li><?php echo $row1->name; ?></li><hr><br>
                       <?php }
                     }
                     $mysqli->close();

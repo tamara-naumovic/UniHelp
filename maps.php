@@ -81,70 +81,50 @@
                         <div class="modal-dialog">
                         
                           <!-- Modal content-->
-                          <div class="modal-content">
+                          <div class="modal-content" >
                             <div class="modal-header" id="add-task-header">
                               <button type="button" class="close" data-dismiss="modal">&times;</button>
                               <h4 class="modal-title" >Faculty info</h4>
                             </div>
-                            <div class="modal-body">
-                              <form id="add-task-form" method="post" action="home.php">
-                                <textarea name="description" id="add-task-form-description" required>Description</textarea>
-
-                                <div class="form-group">
-                                  <label for="add-task-form-num-parc">Number of participants</label>
-                                  <input name="parc_number" type="number" class="form-control" placeholder="Set number of participants" id="add-task-form-num-parc" required>
+                            <div class="modal-body" style="height:500px;">
+                            <!--gornja strana modala-->
+                              <div id="top-side" style="height:30%">
+                                <div id="top-side-left" style="width:50%; float:left;">
+                                  <label id="rank-faculty-name">Faculty of organizational science</label><br>
+                                  <label id="rank-faculty-loaction">Jove Ilica 154</label><br>
+                                  <label id="rank-faculty-sumxp">#faculty-sumxp</label><br>
                                 </div>
+                                <div id="top-side-right" style="width:50%; float:left;">
+                                  <div class="panel panel-warning">
 
-                                <div class="form-group">
-                                  <label for="add-task-form-reward">Reward</label>
-                                  <input name="reward" type="text" class="form-control" placeholder="Enter reward" id="add-task-form-reward">
-                                </div>
+                                      <div class="panel-body">
+                                          <p id="rank-faculty-description">
+                                          <?php 
+                                            include "faculties.class.php";
+                                            $f= new Faculties();
+                                            echo $f->returnB("Faculty of Organizational Sciences");
 
-                                 <table class="table">
-                                      <thead>
-                                        <tr>
-                                          <th><label for="add-task-form-exps">Socail</label></th>
-                                          <th><label for="add-task-form-expc">Carrer</label></th>
-                                          <th><label for="add-task-form-exp0">Collaboration</label></th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td><input name="parc_number" type="number" class="form-control" placeholder="Socail XP gained" id="add-task-form-exps" required></td>
-                                          <td> <input name="parc_number" type="number" class="form-control" placeholder="Carrer XP gained" id="add-task-form-expc" required></td>
-                                          <td><input name="parc_number" type="number" class="form-control" placeholder="Collaboration XP gained" id="add-task-form-expo" required></td>
-                                        </tr>
-                                                                 
-                                      </tbody>
-                                    </table>
-                                <div class="form-group">
-                                  <label name="location" for="add-task-form-location">Location</label>
-                                  <br>
-                                   <select class="selectpicker" id="add-task-form-location">
-                                          <optgroup label="Faculty" >
-                                            <option>Ovde fakulteti</option>
-                                            
-                                          </optgroup>
-                                          <optgroup label="Dorm">
-                                            <option>Ovde domovi</option>
-                                            
-                                          </optgroup>
-                                           <optgroup label="Library" >
-                                            <option>Ovde biblioteke</option>
-                                            
-                                          </optgroup>
-                                           <optgroup label="Restaurants" >
-                                            <option>Ovde menze</option>
-                                            
-                                          </optgroup>
-                                    </select>
-                                   
+                                          ?>
+                                          </p>
+                                      </div>
+                                  </div>
 
                                 </div>
-                                <div class="modal-footer" id="add-task-form-confirm">
-                                  <button name="add_task" type="submit" class="btn btn-default" data-submit="modal">Add</button>
-                                </div>
-                              </form>
+                              </div>
+                              <!-- kraj gornje strane modala-->
+                              <!--donja strana modala-->
+                              <div id="bottom-side">
+                                <label id="rank-faculty-label-student-list" for="rank-faculty-student-list">Student list</label>
+
+
+                                <ul class="list-group" id="rank-faculty-student-list">
+                                  <li class="list-group-item">Emile Eric</li>
+                                  <li class="list-group-item">Tamara Naumovic</li>
+                                  <li class="list-group-item">Mila Marjanovic</li>
+                                  <li class="list-group-item">Ana Licina</li>
+                                </ul>
+                              </div>
+                              <!-- kraj donje strane modala-->
                               <?php
                               if(isset($_POST['add_task'])){
                                   include "task.class.php";

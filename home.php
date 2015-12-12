@@ -355,7 +355,7 @@ if (!isset($_SESSION['use'])) {
                     </header>
                     <div class="panel panel-warning">
 
-                        <div class=panel-body>
+                        <div class="panel-body">
                             Name<br>
                             Location<br>
                             Rank<br>
