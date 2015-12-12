@@ -41,7 +41,7 @@
         </div>
         
         <div class="p-user-details">
-          <h1 class="p-user-name">Jovana Ivkovic</h1>
+          <h1 class="p-user-name">Jelena Ivkovic</h1>
           <p class="p-user-position">Type: Student</p>
             <p class="p-user-position">Faculty of Organizational Sciences</p>
         </div>
