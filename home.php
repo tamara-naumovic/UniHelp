@@ -1,10 +1,10 @@
 <?php @session_start();?>
 <?php
   
-    if(!isset($_SESSION['use']))   
-    {
-     header("Location:index.php"); 
-    }
+    //if(!isset($_SESSION['use']))   
+   // {
+   //  header("Location:index.php"); 
+   // }
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +72,7 @@
                 <header>
                   <span class='first'></span>
                   <span>Add task</span>
-                  <span><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="myBtn">&#9998;</button>
+                  <span><button type="button" class="btn btn-info btn-lg btn-warning" data-toggle="modal" data-target="#myModal" id="myBtn">&#9998;</button>
                      <!-- Modal -->
                       <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
