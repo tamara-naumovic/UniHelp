@@ -6757,4 +6757,125 @@ button.close {
     display: none !important;
   }
 }
+
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+
+    @media (max-width: 767px) {
+
+.navbar-mobile {
+        display:block !important;
+        height:auto;
+        width:auto;
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        overflow:hidden;
+    }
+
+.mnavbar-header{
+    display:block!important;    
+    }
+
+.navbar-collapse-ex1-collapse {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;   
+    }
+
+#navbar-collapse-ex1-collapse {
+    left:0;
+    width:100%;
+    height:100%;
+    display:block ;
+
+    }
+
+.nav-collapse.collapse-ex1-collapse {
+    display: block !important;
+    height: auto !important;
+    }
+
+.collapse.navbar-collapse-ex1-collapse {
+    background-color: rgba(0, 0, 0, 0,1) !important;
+    }
+
+.navbar-brand {
+    margin-bottom:0;
+    display:block;
+    }
+
+.navbar li {
+    font-size:2em;
+    text-align:center;
+    display:inline;
+    }   
+
+.navbar-collapse-ex1-collapse {
+    display:block;
+    }
+}
+}
 /*# sourceMappingURL=bootstrap.css.map */
