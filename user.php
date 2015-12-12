@@ -14,48 +14,7 @@
     <div class="container">
         
 <!-- pocetak menija -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="../" class="navbar-brand">UniHelp</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            
-            <li class="dropdown">
-              
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="http://jsfiddle.net/bootswatch/jmg3gykg/">Open Sandbox</a></li>
-                <li class="divider"></li>
-                <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
-                <li><a href="./bootstrap.css">bootstrap.css</a></li>
-                <li class="divider"></li>
-                <li><a href="./variables.less">variables.less</a></li>
-                <li><a href="./bootswatch.less">bootswatch.less</a></li>
-                <li class="divider"></li>
-                <li><a href="./_variables.scss">_variables.scss</a></li>
-                <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <form class="navbar-form navbar-right" >
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email">
-                          <input type="text" class="form-control" placeholder="Password">
-                      </div>
-              <button type="submit" class="btn btn-default">Posalji</button>
-                      
-                    </form>
-
-        </div>
-      </div>
-    </div>
+   <?php include ("menu.php"); ?>
         <!-- kraj menija menija -->
         
         <!-- pocetak content leva strana -->
@@ -106,10 +65,7 @@
 
       </div>
 
-      <div class="creds">
-        <span>Inspired By</span>
-        <a href="http://www.sketchappsources.com/free-source/1218-profile-card-sketch-freebie-resource.html">Profile Card by Maurivan Luiz</a>
-      </div>
+      
 
     </div>
 
