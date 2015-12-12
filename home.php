@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/feed.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
 
 
 
@@ -27,21 +27,21 @@
         
 <?php include ("menu.php"); ?>
         <!--wall -->
-          <div class="">
+          <div class="wrap-wall">
           <div class="wall">
               <br>
               <br>
               <br>
-              <br>              
+              <br>        
+              <!-- leva strana-->      
               <div class="col-md-3">
-              <header id="tasks-search">
-                  
-                  
+              <header class="tasks-search">
+
                   <span>Search</span>
-                  
-                  
+                 
                 </header>
-                    <form class="form-horizontal">
+                <br>
+                    <form class="form-horizontal" id="search-forma">
                       <label for="job-type">Job type</label>
                         <select class="form-control" id="job-type">
                           <option>Volunteering</option>
@@ -50,7 +50,8 @@
                           <option>Learning</option>
                           <option>Physical work</option>
                         </select>
-                      <label for="peer-type">Peer type</label>
+                        <br>
+                      <label for="peer-type">Location near by</label>
                         <select class="form-control" id="peer-type">
                           <option>S2S</option>
                           <option>C2S</option>
@@ -58,14 +59,43 @@
                           <option>All</option>
                           
                         </select>
+                        <br>
+
+                        <button type="submit" class="btn btn-default">Submit</button>
+
 
                     </form>
               </div>
+              <!-- kraj leve strane-->
+              <!--pocetak wall-a -->
               <div class="col-md-6">
                 <header>
                   <span class='first'></span>
                   <span>Add task</span>
-                  <span>&#9998;</span>
+                  <span><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="myBtn">&#9998;</button>
+                     <!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header" id="add-task-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title" >Add task</h4>
+                            </div>
+                            <div class="modal-body">
+                              <textarea id="add-task-description" >Add description</textarea>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                     <!-- kraj modala--> 
+                    
+                  </span>
                 </header>
                 <main>
                   <input checked='' id='s2s' name='m' type='radio'>
@@ -86,10 +116,41 @@
                   <div class='b'>Duis aute irure dolor in velit esse cillum dolore voneu fugiat nulla.</div>
                 </div>
               </div>
+              <!-- kraj wall-a-->
+
+              <!-- pocetak desne strane-->
               <div class="col-md-3">
-            
-                
+              <div class="best-raneked-student">
+                   <header class="tasks-search">
+
+                    <span>Best ranked student</span>
+                  </header>
+                  <div class="panel panel-warning"> 
+                    
+                    <div class=panel-body> 
+                    Name<br>
+                    Faculty<br>
+                    Rank<br>
+                    </div> 
+                  </div>
               </div>
+                 
+                <div class="best-raneked-faculty">
+                   <header class="tasks-search">
+
+                    <span>Best ranked faculty</span>
+                  </header>
+                  <div class="panel panel-warning"> 
+                    
+                    <div class=panel-body> 
+                    Name<br>
+                    Location<br>
+                    Rank<br>
+                     </div> 
+                  </div>
+              </div>
+              </div>
+              <!-- kraj desne strane-->
             
 
            </div>
