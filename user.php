@@ -41,7 +41,7 @@
         </div>
         
         <div class="p-user-details">
-          <h1 class="p-user-name">Pera Peric</h1>
+          <h1 class="p-user-name">Jovana Ivkovic</h1>
           <p class="p-user-position">Type: Student</p>
             <p class="p-user-position">Faculty of Organizational Sciences</p>
         </div>
@@ -192,7 +192,7 @@ function loadingEffect() {
 fetchJSONFile('https://api.myjson.com/bins/2mgr2', function(data){
 	
 	//inserting data into html
-	avtaar.src = data[0].image;
+	avtaar.src = "img/profil.jpg";
 	
 	tweets.innerHTML = data[0].tweets;
 	followers.innerHTML = data[0].followers;
