@@ -8,7 +8,7 @@
     <meta name="author" content="Licina Ana">
     <link rel="icon" href="images/favicon.jpeg"> 
 
-    <title>Gaming for Life</title>
+    <title>Registrated Successfully</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +21,7 @@
   </div>
   <div style="padding-top: 50%; padding-left:90%;">
     <br>
-    <a href="home.php">Back to Home Page</a>
+    <a href="home.php">Back to LogIn Page</a>
   </div>
   </body>
 </html>

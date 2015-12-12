@@ -100,13 +100,14 @@
                       </div>
                       <form action="task.php?id=<?php echo $row->task_id; ?>" method="post">
                          <?php }
-                         $participants=[];
-                         $br=0;
-                         if($br==$row->parc_number) {
-                          ?><button type="button" class="btn btn-default" style="margin-left:70%;">Enroll</button>
+                         //$participants=[];
+                        // $br=0;
+                         //if($br==$row->parc_number) {
+                          ?>
+                          <!-- <button type="button" class="btn btn-default" style="margin-left:70%;">Enroll</button> -->
 
                         <?php
-                        echo "Task full!"; }
+                       // echo "Task full!"; }
                          if(!isset($_SESSION['enroll'.$row->task_id])){
                          if(!isset($_POST['enroll'.$row->task_id])) { 
                           
