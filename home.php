@@ -53,13 +53,28 @@
                         <br>
                       <label  for="peer-type">Location near by</label>
                         <select name="location" class="form-control" id="peer-type">
-                          <option>4. April</option>
-                          <option>C2S</option>
-                          <option>O2S</option>
-                          <option>All</option>
+                          <?php
+                                  include "connection.php";
+
+                                  $query1="SELECT * FROM buildings ";
+
+                                  if (!$q1=$mysqli->query($query1)){
+                                    echo "<p>There was an error. Please try again later</p>";
+                                    exit();
+                                  }
+                                  if ($q1->num_rows==0){
+                                    echo "There are no locations in the datebase";
+                                  } else {
+                                    while ($row1=$q1->fetch_object()){
+                                      ?>
+                                    <option><?php echo $row1->buildingname; ?></option>
+                                   <?php }
+                                   }
+                                   $mysqli->close();
+                                    ?>
                           
-                        </select>
-                        <br>
+                                    </select>
+                                    <br>
 
                         <button name="choose" type="submit" class="btn btn-default">Submit</button>
 
@@ -123,7 +138,7 @@
                         exit();
                       }
                       if ($q->num_rows==0){
-                        echo "There are no consoles in the store";
+                        echo "There are no tasks in the datebase";
                       } else {
                         while ($row=$q->fetch_object()){
                           ?>
