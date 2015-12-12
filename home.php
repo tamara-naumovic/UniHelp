@@ -166,7 +166,7 @@ if (!isset($_SESSION['use'])) {
 
 
                                       <form id="add-task-form" method="post" action="home.php">
-                                          <textarea name="description" id="add-task-form-description" required>Description</textarea>
+                                          <textarea name="description" id="add-task-form-description" placeholder="Description" required></textarea>
 
                                           <div class="form-group">
                                               <label for="add-task-form-num-parc">Number of participants</label>
@@ -180,12 +180,41 @@ if (!isset($_SESSION['use'])) {
                                               <input name="reward" type="text" class="form-control"
                                                      placeholder="Enter reward" id="add-task-form-reward">
                                           </div>
-
                                           <table class="table">
                                               <thead>
                                               <tr>
-                                                  <th><label for="add-task-form-exps">Socail</label></th>
-                                                  <th><label for="add-task-form-expc">Carrer</label></th>
+                                                  <th><label for="add-task-form-job-type">Job type</label></th>
+                                                  <th><label for="add-task-form-engagement-type">Engagement type</label></th>
+                                              </tr>
+                                              </thead>
+                                              <tbody>
+                                              <tr>
+                                                  <td> <select name="job_type" class="form-control" id="add-task-form-job-type">
+                                                          <option>Volunteering</option>
+                                                          <option>Practice</option>
+                                                          <option>Workshop</option>
+                                                          <option>Learning</option>
+                                                          <option>Physical work</option>
+                                                       </select>
+                                                  </td>
+                                                  <td><select name="job_type" class="form-control" id="add-task-form-job-type">
+                                                          <option>S2S</option>
+                                                          <option>C2S</option>
+                                                          <option>O2S</option>
+                                                          
+                                                       </select>
+                                                  </td>
+                                                  
+                                              </tr>
+
+                                              </tbody>
+                                          </table>
+                                                                                     
+                                          <table class="table">
+                                              <thead>
+                                              <tr>
+                                                  <th><label for="add-task-form-exps">Social</label></th>
+                                                  <th><label for="add-task-form-expc">Career</label></th>
                                                   <th><label for="add-task-form-exp0">Collaboration</label></th>
                                               </tr>
                                               </thead>
