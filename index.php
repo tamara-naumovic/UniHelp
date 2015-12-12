@@ -26,6 +26,9 @@ if(isset($_POST['signin']))
   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js">
+    
+    </script>
    
   <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
   <style>
