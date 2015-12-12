@@ -107,15 +107,32 @@
                   <input id='all' name='m' type='radio'>
                   <label for='all'>All</label>
                 </main>
+                <?php
+                      include "connection.php";
+
+                      $query="SELECT * FROM tasks";
+                      if (!$q=$mysqli->query($query)){
+                        echo "<p>There was an error. Please try again later</p>";
+                        exit();
+                      }
+                      if ($q->num_rows==0){
+                        echo "There are no consoles in the store";
+                      } else {
+                        while ($row=$q->fetch_object()){
+                          ?>
                 <div class='body'>
                   <img alt='kanye' src='http://f.cl.ly/items/1m050C1L382z1c1a1S2E/322005-kanye-west.png'>
                   <div class='t'>
-                    <span class='name'>Kanye West</span>
+                    <span class='name'><?php echo $row->org_name; ?></span>
                     <span class='forward'>&#10150;</span>
                   </div>
-                  <div class='b'>Duis aute irure dolor in velit esse cillum dolore voneu fugiat nulla.</div>
+                  <div class='b'><?php echo $row->description; ?></div>
                 </div>
               </div>
+              <?php }
+              } 
+                $mysqli->close();
+              ?>
               <!-- kraj wall-a-->
 
               <!-- pocetak desne strane-->
