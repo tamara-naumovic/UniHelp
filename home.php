@@ -107,7 +107,7 @@ if (!isset($_SESSION['use'])) {
                             $u=$user->findUser($_SESSION['id']);
 
                             include "connection.php";
-                            $query5 = "INSERT INTO tasks (description, category, location, parc_number, org_name, reward, exps, expc, expo, partc_id, job_type) VALUES ('" . $mysqli->real_escape_string($_POST['description']) . "', '" . $mysqli->real_escape_string('c') . "', '" . $mysqli->real_escape_string($_POST['location']) . "', '" . $_POST['parc_number'] . "', '" . $mysqli->real_escape_string($u) . "', '" . $mysqli->real_escape_string($_POST['reward']) . "', '" . $_POST['exps'] . "', '" . $_POST['expc'] . "', '" . $_POST['expo'] . "', '" . $_SESSION['id'] . "', '" . $mysqli->real_escape_string("Volonter") . "')";
+                            $query5 = "INSERT INTO tasks (description, category, location, parc_number, org_name, reward, exps, expc, expo, partc_id, job_type) VALUES ('" . $mysqli->real_escape_string($_POST['description']) . "', '" . $mysqli->real_escape_string($_POST['category']) . "', '" . $mysqli->real_escape_string($_POST['location']) . "', '" . $_POST['parc_number'] . "', '" . $mysqli->real_escape_string($u) . "', '" . $mysqli->real_escape_string($_POST['reward']) . "', '" . $_POST['exps'] . "', '" . $_POST['expc'] . "', '" . $_POST['expo'] . "', '" . $_SESSION['id'] . "', '" . $mysqli->real_escape_string($_POST['job_type']) . "')";
                             if ($mysqli->query($query5)) {
                                 echo "Success";
                             } else {
@@ -197,7 +197,7 @@ if (!isset($_SESSION['use'])) {
                                                           <option>Physical work</option>
                                                        </select>
                                                   </td>
-                                                  <td><select name="job_type" class="form-control" id="add-task-form-job-type">
+                                                  <td><select name="category" class="form-control" id="add-task-form-job-type">
                                                           <option>S2S</option>
                                                           <option>C2S</option>
                                                           <option>O2S</option>
