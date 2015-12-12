@@ -41,9 +41,9 @@
                  
                 </header>
                 <br>
-                    <form class="form-horizontal" id="search-forma">
-                      <label for="job-type">Job type</label>
-                        <select class="form-control" id="job-type">
+                    <form action="home.php" method="post" class="form-horizontal" id="search-forma">
+                      <label  for="job-type">Job type</label>
+                        <select name="job_type" class="form-control" id="job-type">
                           <option>Volunteering</option>
                           <option>Practice</option>
                           <option>Workshop</option>
@@ -51,9 +51,9 @@
                           <option>Physical work</option>
                         </select>
                         <br>
-                      <label for="peer-type">Location near by</label>
-                        <select class="form-control" id="peer-type">
-                          <option>S2S</option>
+                      <label  for="peer-type">Location near by</label>
+                        <select name="location" class="form-control" id="peer-type">
+                          <option>4. April</option>
                           <option>C2S</option>
                           <option>O2S</option>
                           <option>All</option>
@@ -61,7 +61,7 @@
                         </select>
                         <br>
 
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button name="choose" type="submit" class="btn btn-default">Submit</button>
 
 
                     </form>
@@ -112,7 +112,12 @@
                   <?php
                       include "connection.php";
 
-                      $query="SELECT * FROM tasks";
+                      $query="SELECT * FROM tasks ";
+
+                      if(isset($_POST['choose'])){
+                        $query.="WHERE (job_type='".$_POST['job_type']."' AND location='".$_POST['location']."')";
+                      }
+
                       if (!$q=$mysqli->query($query)){
                         echo "<p>There was an error. Please try again later</p>";
                         exit();
