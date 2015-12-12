@@ -113,16 +113,17 @@
                   </span>
                 </header>
                 <main>
-                  <input checked='' id='s2s' name='m' type='radio'>
+                  <input id='s2s' name='category' type='radio' value='s'>
                   <label for='s2s'>S2S</label>
-                  <input  id='c2s' name='m' type='radio'>
+                  <input  id='c2s' name='category' type='radio' value='c'>
                   <label for='c2s'>C2S</label>
-                  <input id='o2s' name='m' type='radio'>
+                  <input id='o2s' name='category' type='radio' value='o'>
                   <label for='o2s'>O2S</label>
-                  <input id='all' name='m' type='radio'>
+                  <input checked='' id='all' name='category' type='radio' value='all'>
                   <label for='all'>All</label>
                 </main>
-                
+
+                              
                 <div class='body'>
                   <?php
                       include "connection.php";
