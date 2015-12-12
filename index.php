@@ -9,9 +9,10 @@
 	<link rel="shortcut icon" type="image/png" href="../favicon.png"/>
     <style>
         .logo{height: 30px; padding-top: 0px}
+        #head-text{color: white}
       </style>
 </head>
-<body background="bootstrap/dist/img/bg.jpg">
+<body background="bootstrap/dist/img/bg.png">
     <div class="container">
         
 <!-- pocetak menija -->
@@ -66,7 +67,7 @@
 <div class="col-lg-6">
             <div class="bs-component">
                 <br><br><br><br><br><br>
-              <h1>Get things done with <strong>UniHelp</strong>, the ultimate tool for connecting students, companies and organizations.</h1>
+              <h1 id="head-text">Get things done with <strong>UniHelp</strong>, the ultimate tool for connecting students, companies and organizations.</h1>
               
             </div>
 
