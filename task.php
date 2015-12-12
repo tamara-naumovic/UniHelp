@@ -17,7 +17,10 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
-  
+  <style>
+  .logo{height: 55px; padding-top: 0px}
+  #head-text{color: white}
+  </style>
 </head>
 <body>
     
