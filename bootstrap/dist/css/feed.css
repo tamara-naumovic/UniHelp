@@ -1,17 +1,21 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+#task-wrap{
+  min-height:400px;
+
+}
+#add-task-form{
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
 #task-page span:last-child:hover {
   background-color: #f3a41e;
 }
-#task-wrap{
-  min-height:400px;
-}
-#add-task-description{
+
+#add-task-form-description{
   width: 100%;
-  height: 100%;
-  color: black;
-  font-family: "Open Sans", sans-serif;
 }
 #add-task-header{
   width: 100%;

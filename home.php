@@ -139,10 +139,47 @@
                               <h4 class="modal-title" >Add task</h4>
                             </div>
                             <div class="modal-body">
-                              <textarea id="add-task-description" >Add description</textarea>
+                              <form id="add-task-form">
+                                <textarea id="add-task-form-description" required>Description</textarea>
+
+                                <div class="form-group">
+                                  <label for="add-task-form-num-parc">Number of participants</label>
+                                  <input type="number" class="form-control" placeholder="Set number of participants" id="add-task-form-num-parc" required>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="add-task-form-reward">Reward</label>
+                                  <input type="text" class="form-control" placeholder="Enter reward" id="add-task-form-reward">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="add-task-form-location">Location</label>
+                                  <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                      <li class="dropdown-header">Faculty</li>
+                                      <li><a href="#">FON</a></li>
+                                      <li class="divider"></li>
+                                      <li class="dropdown-header">Library</li>
+                                      <li><a href="#">Neka citaonica</a></li>
+                                      <li class="divider"></li>
+                                      <li class="dropdown-header">Restaurants</li>
+                                      <li><a href="#">Lola</a></li>
+                                      <li class="divider"></li>
+                                      <li class="dropdown-header">Dorm</li>
+                                      <li><a href="#">Studenjak</a></li>
+                                      <li class="divider"></li>
+                                    </ul>
+                                  </div>
+
+                                  
+                                </div>
+
+                              </form>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-default" data-submit="modal">Add</button>
                             </div>
                           </div>
                           
