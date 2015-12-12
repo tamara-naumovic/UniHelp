@@ -1,10 +1,11 @@
 <?php @session_start();?>
 <?php
+  
+    //if(!isset($_SESSION['use']))   
+    //{
+    //  header("Location:index.php"); 
+   // }
 
-    if(!isset($_SESSION['use']))   
-    {
-      header("Location:index.php"); 
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +15,8 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/feed.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-	
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+  
 
 
 
@@ -26,7 +27,6 @@
         
 <?php include ("menu.php"); ?>
         <!--wall -->
-        <div>
           <div class="">
           <div class="wall">
               <br>
@@ -41,22 +41,25 @@
                   
                   
                 </header>
+                    <form class="form-horizontal">
+                      <label for="job-type">Job type</label>
+                        <select class="form-control" id="job-type">
+                          <option>Volunteering</option>
+                          <option>Practice</option>
+                          <option>Workshop</option>
+                          <option>Learning</option>
+                          <option>Physical work</option>
+                        </select>
+                      <label for="peer-type">Peer type</label>
+                        <select class="form-control" id="peer-type">
+                          <option>S2S</option>
+                          <option>C2S</option>
+                          <option>O2S</option>
+                          <option>All</option>
+                          
+                        </select>
 
-                <form class="tasks-search-form" style="padding-top:6px">
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Dropdown
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                    </div>
-                </form>
+                    </form>
               </div>
               <div class="col-md-6">
                 <header>

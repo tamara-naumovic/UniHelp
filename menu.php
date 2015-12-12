@@ -16,7 +16,11 @@
               <a  href="home.php" id="home">Home</a>
             </li>
             <li>
+<<<<<<< HEAD
               <a href="profile-<?php // echo $_SESSION['id']; ?>.php">Profile</a>
+=======
+              <a href="profile-<?php //echo $_SESSION['id']; ?>.php">Profile</a>
+>>>>>>> origin/master
             </li>
             <li>
               <a href="rank.php">Rank list</a>

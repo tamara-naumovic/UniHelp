@@ -14,7 +14,11 @@
     <div class="container">
         
 <!-- pocetak menija -->
+<<<<<<< HEAD
    <?php include ("menu.php"); ?>
+=======
+    <?php include ("menu.php"); ?>
+>>>>>>> origin/master
         <!-- kraj menija menija -->
         
         <!-- pocetak content leva strana -->
