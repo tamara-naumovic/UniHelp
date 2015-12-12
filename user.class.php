@@ -103,6 +103,21 @@ class User{
     $mysqli->close();
 	}
 
+	public function findUser($id){
+		include "connection.php";
+		$query="SELECT * FROM users WHERE user_id='".$id."';";
+		if (!$q=$mysqli->query($query)){
+      return "<p>An error has occured. Please try later.</p>";
+      
+    }
+    if ($q->num_rows==1){
+      $row=$q->fetch_object();
+      return $row->name;
+      
+      
+	}
+
+}
 }
 
 ?>

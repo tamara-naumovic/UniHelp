@@ -139,48 +139,75 @@
                               <h4 class="modal-title" >Add task</h4>
                             </div>
                             <div class="modal-body">
-                              <form id="add-task-form">
-                                <textarea id="add-task-form-description" required>Description</textarea>
+                              <form id="add-task-form" method="post" action="home.php">
+                                <textarea name="description" id="add-task-form-description" required>Description</textarea>
 
                                 <div class="form-group">
                                   <label for="add-task-form-num-parc">Number of participants</label>
-                                  <input type="number" class="form-control" placeholder="Set number of participants" id="add-task-form-num-parc" required>
+                                  <input name="parc_number" type="number" class="form-control" placeholder="Set number of participants" id="add-task-form-num-parc" required>
                                 </div>
 
                                 <div class="form-group">
                                   <label for="add-task-form-reward">Reward</label>
-                                  <input type="text" class="form-control" placeholder="Enter reward" id="add-task-form-reward">
+                                  <input name="reward" type="text" class="form-control" placeholder="Enter reward" id="add-task-form-reward">
                                 </div>
 
                                 <div class="form-group">
-                                  <label for="add-task-form-location">Location</label>
+                                  <label name="location" for="add-task-form-location">Location</label>
                                   <div class="dropdown">
                                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
                                     <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
                                       <li class="dropdown-header">Faculty</li>
-                                      <li><a href="#">FON</a></li>
+                                      <?php 
+                                        include "building.class.php";
+                                        $b=new Building();
+                                        $b->returnB(4);
+                                      ?>
                                       <li class="divider"></li>
                                       <li class="dropdown-header">Library</li>
-                                      <li><a href="#">Neka citaonica</a></li>
+                                      <?php 
+                                        
+                                        $b1=new Building();
+                                        $b1->returnB(3);
+                                      ?>
                                       <li class="divider"></li>
                                       <li class="dropdown-header">Restaurants</li>
-                                      <li><a href="#">Lola</a></li>
+                                      <?php 
+                                        
+                                        $b2=new Building();
+                                        $b2->returnB(2);
+                                      ?>
                                       <li class="divider"></li>
                                       <li class="dropdown-header">Dorm</li>
-                                      <li><a href="#">Studenjak</a></li>
+                                      <?php 
+                                        
+                                        $b3=new Building();
+                                        $b3->returnB(1);
+                                      ?>
                                       <li class="divider"></li>
                                     </ul>
                                   </div>
 
                                   
                                 </div>
-
+                                <div class="modal-footer">
+                              <button name="add_task" type="submit" class="btn btn-default" data-submit="modal">Add</button>
+                            </div>
                               </form>
+                              <?php
+                              if(isset($_POST['add_task'])){
+                                  include "task.class.php";
+                                  include "user.class.php";
+                                  $task=new Task();
+                                  $user=new User();
+
+                                  $task->create($_POST, $user->findUser($_SESSION['id']));
+                                  echo $task->writeToDb();
+                              }
+                              ?>
                             </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-submit="modal">Add</button>
-                            </div>
+                            
                           </div>
                           
                         </div>
