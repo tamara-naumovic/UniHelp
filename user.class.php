@@ -20,9 +20,9 @@ class User{
 		$this->email = $data['email'];
 		$this->password = $data['password'];
 		$this->fax = $data['fax'];
-		$this->exps = 0;
-		$this->expc = 0;
-		$this->expo = 0;
+		$this->exps = 50;
+		$this->expc = 50;
+		$this->expo = 50;
 		$this->tasks_org = 0;
 		$this->tasks_parc = 0;
 		$this->rank = 0;
@@ -31,11 +31,11 @@ class User{
 	public function writeToDb(){
 		
 		include "connection.php";
-		$query="INSERT INTO korisnici (ime, prezime, email, password, privilegija) VALUES ('".$mysqli->real_escape_string($this->ime)."', '".$mysqli->real_escape_string($this->prezime)."', '".$mysqli->real_escape_string($this->email)."', '".$mysqli->real_escape_string($this->password)."', '".$mysqli->real_escape_string($this->privilegija)."')";
+		$query="INSERT INTO users (name, email, password, fax, exps, expc, expo, tasks_org, tasks_parc, rank) VALUES ('".$mysqli->real_escape_string($this->name)."', '".$mysqli->real_escape_string($this->email)."', '".$mysqli->real_escape_string($this->password)."', '".$mysqli->real_escape_string($this->fax)."', '".$mysqli->real_escape_string($this->exps)."', '".$mysqli->real_escape_string($this->expc)."', '".$mysqli->real_escape_string($this->expo)."', '".$mysqli->real_escape_string($this->tasks_org)."', '".$mysqli->real_escape_string($this->tasks_parc)."', '".$mysqli->real_escape_string($this->rank)."')";
 		if ($mysqli->query($query))
 		{
 			?> <script type="text/javascript">
-			window.location.href = 'home.php';
+			window.location.href = 'success.php';
 			</script>
 			<?php
 		} 
@@ -50,7 +50,7 @@ class User{
 
 		include "connection.php";
 
-		$query="SELECT * FROM korisnici WHERE (email='".trim($mail)."' AND password='".trim($old)."')";
+		$query="SELECT * FROM users WHERE (email='".trim($mail)."' AND password='".trim($old)."')";
 
 		if (!$q=$mysqli->query($query)){
 			echo "<p>An error has occured. Please try later.</p>";
@@ -58,7 +58,7 @@ class User{
 		}
 		if ($q->num_rows==1){
 
-			$query2="UPDATE korisnici SET password='".$mysqli->real_escape_string($new)."' WHERE (email='".trim($mail)."' AND password='".trim($old)."')";
+			$query2="UPDATE users SET password='".$mysqli->real_escape_string($new)."' WHERE (email='".trim($mail)."' AND password='".trim($old)."')";
 			if (!$q2=$mysqli->query($query2)){
 				echo "<p>An error has occured. Please try later.</p>";
 				exit();
@@ -86,10 +86,11 @@ class User{
     if ($q->num_rows==1){
 
       $_SESSION['use']=$mail;
+      $_SESSION['id']=$q->fetch_object()->user_id;
       
       ?>
      <script type="text/javascript">
-      window.location.href = 'success.html';
+      window.location.href = 'home.php';
       </script>
 
       <?php 

@@ -1,3 +1,11 @@
+<?php @session_start();?>
+<?php
+
+    if(!isset($_SESSION['use']))   
+    {
+      header("Location:index.php"); 
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,40 +24,7 @@
 <body>
     <div class="container">
         
-<!-- pocetak menija -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="#" class="navbar-brand">UniHelp</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li >
-              <a  href="#" id="home">Home</a>
-            </li>
-            <li>
-              <a href="">Profile</a>
-            </li>
-            <li>
-              <a href="">Rank list</a>
-            </li>
-            
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="logout.php" target="_blank">Log Out</a></li>
-            
-          </ul>
-
-        </div>
-      </div>
-    </div>
-        <!-- kraj menija menija -->
+<?php include ("menu.php"); ?>
         <!--wall -->
         <div>
           <div class="">
