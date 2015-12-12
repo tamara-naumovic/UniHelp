@@ -11,6 +11,21 @@
         .logo{height: 30px; padding-top: 0px}
         #head-text{color: white}
       </style>
+      <script type="text/javascript">
+    var password = document.getElementById("password")
+    , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+      if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+      } else {
+        confirm_password.setCustomValidity('');
+      }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+    </script>
 </head>
 <body background="bootstrap/dist/img/bg.png">
     <div class="container">
@@ -78,7 +93,7 @@
                               <br><br><br><br><br><br>
           <div class="col-lg-6">
             <div class="well bs-component">
-              <form class="form-horizontal">
+              <form class="form-horizontal" id="enableForm" method="post" action="">
 
                 <fieldset>
                   <h2>Sign up</h2>
@@ -86,26 +101,26 @@
                     <div class="form-group">
                     <label for="inputName" class="col-lg-2 control-label">Name</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                      <input type="text" class="form-control" id="inputName" placeholder="Name" required autofocus>
                     </div>
                   </div>
                     
                     <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" required autofocus>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      <input name="password" type="password" data-minlength="6" id="password" class="form-control" placeholder="Password"  required>
                     </div>
                   </div>
                     <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Repeat Password</label>
                     <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Password" required autofocus>
                     </div>
                   </div>
                   
