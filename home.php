@@ -342,9 +342,9 @@ if (!isset($_SESSION['use'])) {
                     <div class="panel panel-warning">
 
                         <div class=panel-body>
-                            Name<br>
-                            Faculty<br>
-                            Rank<br>
+                            Jelena Ivkovic<br>
+                            Faculty of organizational science<br>
+                            320<br>
                         </div>
                     </div>
                 </div>
@@ -357,9 +357,9 @@ if (!isset($_SESSION['use'])) {
                     <div class="panel panel-warning">
 
                         <div class="panel-body">
-                            Name<br>
-                            Location<br>
-                            Rank<br>
+                            Faculty of organizational science<br>
+                            Jove Ilica, 154<br>
+                            320<br>
                         </div>
                     </div>
                 </div>
