@@ -10,7 +10,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" type="image/png" href="../favicon.png"/>
-           
+    <link rel="icon" href="bootstrap/dist/img/favicon.png">        
  <style>
   .logo{height: 55px; padding-top: 0px}
   #head-text{color: white}

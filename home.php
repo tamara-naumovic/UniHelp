@@ -11,6 +11,7 @@ if (!isset($_SESSION['use'])) {
 <head>
     <meta charset="utf-8">
     <title>UniHelp - Home</title>
+    <link rel="icon" href="bootstrap/dist/img/favicon.png"> 
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/feed.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>

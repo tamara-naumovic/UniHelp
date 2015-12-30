@@ -21,6 +21,7 @@
   .logo{height: 55px; padding-top: 0px}
   #head-text{color: white}
   </style>
+  <link rel="icon" href="bootstrap/dist/img/favicon.png"> 
 </head>
 <body>
     

@@ -9,7 +9,7 @@
     <link rel="icon" href="images/favicon.jpeg"> 
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/feed.css">
-    
+    <link rel="icon" href="bootstrap/dist/img/favicon.png"> 
 
     <title>Registrated Successfully</title>
 

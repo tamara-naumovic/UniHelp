@@ -35,6 +35,8 @@ if(isset($_POST['signin']))
   .logo{height: 55px; padding-top: 0px}
   #head-text{color: white}
   </style>
+  <link rel="icon" href="bootstrap/dist/img/favicon.png"> 
+
 
 </head>
 <body background="bootstrap/dist/img/bg.png" style="background-repeat:no-repeat;" >
